@@ -22,7 +22,7 @@ TARGET_KERNEL_VERSION := 4.4
 TARGET_KERNEL_LLVM_BINUTILS := false
 
 # inherit from the proprietary version
--include vendor/lge/joan-common/BoardConfigVendor.mk
+include vendor/lge/joan-common/BoardConfigVendor.mk
 
 # Platform
 TARGET_ARCH := arm64
@@ -147,6 +147,9 @@ BOARD_HAVE_QCOM_FM := true
 USE_DEVICE_SPECIFIC_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
+
+# Health
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/battery_charging_enabled
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
