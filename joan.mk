@@ -159,6 +159,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
     android.hardware.drm-service.clearkey
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1 \
@@ -183,13 +187,13 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1 \
     android.hardware.gnss@2.1.vendor
 
-PRODUCT_PACKAGES += \
-    flp.conf \
-    gps.conf \
-    izat.conf \
-    lowi.conf \
-    sap.conf \
-    xtwifi.conf
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
+    $(COMMON_PATH)/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
+    $(COMMON_PATH)/gps/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
+    $(COMMON_PATH)/gps/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
+    $(COMMON_PATH)/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
+    $(COMMON_PATH)/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
 # HDR
 PRODUCT_COPY_FILES += \
@@ -272,7 +276,7 @@ PRODUCT_PACKAGES += \
 
 # Live Display
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.joan
+    vendor.lineage.livedisplay@2.0-service.lge
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -472,7 +476,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.3-service.lge
+    android.hardware.vibrator-service.lge
 
 # VNDK
 PRODUCT_PACKAGES += \
