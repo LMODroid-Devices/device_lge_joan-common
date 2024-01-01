@@ -132,6 +132,7 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_USES_ION := true
 TARGET_USES_HWC2 := true
 TARGET_USES_GRALLOC1 := true
+TARGET_SCREEN_DENSITY := 540
 
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
@@ -198,6 +199,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
 # Recovery
 BOOTLOADER_MESSAGE_OFFSET := 128
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.joan
+TARGET_RECOVERY_DENSITY := xxxhdpi
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
